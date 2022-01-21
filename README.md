@@ -1,3 +1,15 @@
+##1、增加功能：读取程序执行目录配置，原来的写死用户目录有点麻烦。config.go
+##2、修复缺失模块，替换为github.com/eycorsican/go-tun2socks v1.16.11 删除用不到的homedir-go模块
+##3、编译方法：先go get github.com/bitcl2/lightsocks ，修改文件后，进入/go/src/github.com/gwuhaolin/lightsocks/cmd两个目录分别go build。
+
+
+
+
+
+
+
+
+
 [![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/github.com/gwuhaolin/lightsocks)
 
 # [Lightsocks](https://github.com/gwuhaolin/lightsocks)
