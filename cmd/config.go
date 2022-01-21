@@ -3,11 +3,12 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/mitchellh/go-homedir"
+//	"github.com/mitchellh/go-homedir"
 	"io/ioutil"
 	"log"
 	"os"
 	"path"
+	"path/filepath"
 )
 
 var (
@@ -22,7 +23,30 @@ type Config struct {
 }
 
 func init() {
-	home, _ := homedir.Dir()
+//	home, _ := homedir.Dir() 修改为当前路径 需要注释掉上面没有用到的"github.com/mitchellh/go-homedir"
+//添加模块	"path/filepath"，第一步获取执行文件所在绝对路径（含执行文件本身），第二步获取目录名。
+    
+//
+
+    ex, err := os.Executable()
+    if err != nil {
+        panic(err)
+    }
+
+    home := filepath.Dir(ex)
+
+//
+
+
+//转自链接：https://learnku.com/go/wikis/23398
+
+
+
+
+
+
+
+
 	// 默认的配置文件名称
 	configFilename := ".lightsocks.json"
 	// 如果用户有传配置文件，就使用用户传入的配置文件
